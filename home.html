@@ -7,33 +7,9 @@
 </head>
 <body>
     <form id="loginForm" action="/login" method="post">
-        <label for="username">Dangnhap:</label>
+        <label for="username">User name:</label>
         <input type="text" id="username" name="username" required><br><br>
-        <div>
-            <label for="password">Matkhau:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div>
-            <input type="submit" value="đăng nhập">
-        </div>
+       
     </form>
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Ngăn chặn gửi form mặc định
-
-            // Lấy giá trị nhập từ người dùng
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-
-            // Kiểm tra thông tin đăng nhập
-            if (username === "admin" && password === "admin") {
-                // Nếu thông tin đúng, chuyển hướng đến trang đăng nhập thành công
-                window.location.href = "/login-success.html";
-            } else {
-                // Nếu thông tin không đúng, hiển thị thông báo lỗi
-                alert("Tên đăng nhập hoặc mật khẩu không đúng.");
-            }
-        });
-    </script>
 </body>
 </html>
